@@ -97,6 +97,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+body {
+  background: url('/Users/hollyj/Documents/yoobee/projects/portfolio/src/assets/nepal.jpg');
+}
 h3 {
   margin: 40px 0 0;
 }
