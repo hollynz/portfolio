@@ -1,20 +1,48 @@
 <template>
-    <div class="container">
-      <div class="menu">
-        <i class="fas fa-ellipsis-h"></i>
-        <div class="columns">
-            <div class="col">content</div>
-            <div class="col">content</div>
-            <div class="col">content</div>
-            <div class="col">content</div>
-            <div class="col">content</div>
-            <div class="col">content</div>
-            <div class="col">content</div>
-            <div class="col">content</div>
-            <div class="col">content</div>
-        </div>
+  <div class="container">
+    <div class="menu">
+      <i class="fas fa-ellipsis-h"></i>
+      <div class="columns">
+        <div class="col">content</div>
+        <div class="col">content</div>
+        <div class="col">content</div>
+        <div class="col">content</div>
+        <div class="col">content</div>
+        <div class="col">content</div>
+        <div class="col">content</div>
+        <div class="col">content</div>
+        <div class="col">content</div>
       </div>
     </div>
+    <div class="menu">
+      <i class="fas fa-ellipsis-h"></i>
+      <div class="columns">
+        <div class="col">content</div>
+        <div class="col">content</div>
+        <div class="col">content</div>
+        <div class="col">content</div>
+        <div class="col">content</div>
+        <div class="col">content</div>
+        <div class="col">content</div>
+        <div class="col">content</div>
+        <div class="col">content</div>
+      </div>
+    </div>
+    <div class="menu">
+      <i class="fas fa-ellipsis-h"></i>
+      <div class="columns">
+        <div class="col">content</div>
+        <div class="col">content</div>
+        <div class="col">content</div>
+        <div class="col">content</div>
+        <div class="col">content</div>
+        <div class="col">content</div>
+        <div class="col">content</div>
+        <div class="col">content</div>
+        <div class="col">content</div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -25,20 +53,22 @@ export default {
 
 <style lang="scss">
 .container {
-  width: 90%;
+  width: 70%;
   margin: 5% auto;
-  background: rgba(0, 0, 0, 0.2);
+//   background: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
   .menu {
     width: 40px;
     height: 40px;
     background: rgba(249, 249, 249, 0.8);
-    margin: 5%;
+    // margin: 5%;
     transition: all 0.4s ease;
     display: flex;
     justify-content: center;
     align-items: center;
     .columns {
-        display: none;
+      display: none;
     }
     &:hover {
       cursor: pointer;
@@ -50,20 +80,20 @@ export default {
         display: none;
       }
       .columns {
-          height: 100%;
-          width: 80%;
-          display: flex;
-          justify-content: space-between;
-          padding: 0;
-          margin: 10px auto;
-          flex-wrap: wrap;
-      }
-    }
-    .col {
+        height: 100%;
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         padding: 0;
-        width: 30%;
-        background: rgba(0, 0, 0, 0.6);
-        height: 100px;
+        flex-wrap: wrap;
+        .col {
+          padding: 0;
+          width: 30%;
+          background: rgba(0, 0, 0, 0.6);
+          height: 100px;
+        }
+      }
     }
   }
 }

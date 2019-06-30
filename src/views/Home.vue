@@ -21,12 +21,10 @@ export default {
 .home {
   width: 100%;
   height: 100%;
-  position: relative;
+  // position: relative;
   .title {
-    // padding-left: 10%;
-    margin: auto;
-    text-align: center;
-    bottom: 40px;
+    margin: -40px;
+    bottom: 0;
     right: 0;
     position: absolute;
     font-size: 10em;
