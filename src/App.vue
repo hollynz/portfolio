@@ -9,10 +9,16 @@
 </template>
 
 <style lang="scss">
+html {
+  height: 100vh;
+  position: relative;
+}
 body {
+  position: absolute;
+  top: 0;
   margin: 0;
   padding: 0;
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   background: url('./assets/mt-cook.jpg') center / cover;
   #app {
@@ -25,6 +31,7 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
+    top: 0;
   }
 }
 

@@ -2,6 +2,17 @@
     <div class="container">
       <div class="menu">
         <i class="fas fa-ellipsis-h"></i>
+        <div class="columns">
+            <div class="col">content</div>
+            <div class="col">content</div>
+            <div class="col">content</div>
+            <div class="col">content</div>
+            <div class="col">content</div>
+            <div class="col">content</div>
+            <div class="col">content</div>
+            <div class="col">content</div>
+            <div class="col">content</div>
+        </div>
       </div>
     </div>
 </template>
@@ -26,15 +37,33 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    .columns {
+        display: none;
+    }
     &:hover {
       cursor: pointer;
       width: 80vw;
-      height: 100px;
+      height: 70vh;
       // margin: 20px;
       transition: all 0.4s ease-in-out;
       .fas {
         display: none;
       }
+      .columns {
+          height: 100%;
+          width: 80%;
+          display: flex;
+          justify-content: space-between;
+          padding: 0;
+          margin: 10px auto;
+          flex-wrap: wrap;
+      }
+    }
+    .col {
+        padding: 0;
+        width: 30%;
+        background: rgba(0, 0, 0, 0.6);
+        height: 100px;
     }
   }
 }

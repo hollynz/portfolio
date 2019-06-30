@@ -23,11 +23,13 @@ export default {
   height: 100%;
   position: relative;
   .title {
-    position: absolute;
-    left: 20%;
-    top: 20%;
+    // padding-left: 10%;
+    margin: auto;
     text-align: center;
-    font-size: 5em;
+    bottom: 40px;
+    right: 0;
+    position: absolute;
+    font-size: 10em;
     color: rgba(255, 255, 255, 0.4);
 // font-family: 'Indie Flower', cursive;
 // font-family: 'Allerta Stencil', sans-serif;
