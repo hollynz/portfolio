@@ -24,10 +24,10 @@ export default {
   // position: relative;
   .title {
     margin: -40px;
-    bottom: 0;
-    right: 0;
+    bottom: -10px;
+    right: 50px;
     position: absolute;
-    font-size: 10em;
+    font-size: 185px;
     color: rgba(255, 255, 255, 0.4);
 // font-family: 'Indie Flower', cursive;
 // font-family: 'Allerta Stencil', sans-serif;
