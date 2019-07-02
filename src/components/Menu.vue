@@ -1,8 +1,10 @@
 <template>
-  <div class="container">
+  <div class="container menu-container">
+    <!-- menu: about -->
     <div class="menu about">
       <i class="fas fa-user menu-icon"></i>
       <div class="content">
+        <!-- <img class="nz-map" src="../assets/nz-map.png" alt="Map of NZ"> -->
         <h1>Kia ora.</h1>
         <ul>
           <li>
@@ -43,6 +45,7 @@
         </ul>
       </div>
     </div>
+    <!-- menu: tech -->
     <div class="menu">
       <i class="fab fa-html5 menu-icon"></i>
       <div class="content">
@@ -60,6 +63,7 @@
         </div>
       </div>
     </div>
+    <!-- menu: contact -->
     <div class="menu">
       <i class="fas fa-at menu-icon"></i>
       <div class="content">
@@ -97,16 +101,20 @@ export default {
 </script>
 
 <style lang="scss">
-.container {
-  width: 70%;
-  margin: 5% auto;
-  //   background: rgba(0, 0, 0, 0.2);
-  display: flex;
-  justify-content: space-between;
+.menu-container {
+    // height: 40%;
+    margin: 5% auto;
+    //   background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: hidden;
   .menu {
-    width: 40px;
-    height: 40px;
-    background: rgba(255, 255, 255, 0.7);
+    z-index: 2;
+    width: 80px;
+    height: 80px;
+    // background: rgba(255, 255, 255, 0.8);
+    border: solid 1px rgba(255, 255, 255, 0.1);
     // margin: 5%;
     transition: all 0.4s ease;
     display: flex;
@@ -114,16 +122,18 @@ export default {
     align-items: center;
     cursor: pointer;
     .menu-icon {
-      font-size: 20px;
+      font-size: 40px;
       color: #5e7ca0;
+      color: rgba(255, 255, 255, 0.3);
     }
     .content {
       display: none;
     }
     &:hover {
+      overflow-y: scroll;
       background: rgba(255, 255, 255, 0.9);
       cursor: auto;
-      width: 80vw;
+      width: 100vw;
       height: 70vh;
       // margin: 20px;
       margin-bottom: 50vh;
@@ -167,9 +177,18 @@ export default {
       }
     }
   }
-  .menu.about:hover {
-    background: rgba(255,255,255, 0.7) url('../assets/nz-map.png') top right / contain;
-    background-repeat: no-repeat;
+  .menu.about {
+    position: relative;
+    overflow: hidden;
+    .nz-map {
+      z-index: -1;
+      position: absolute;
+      height: 100%;
+      right: 5%;
+      top: 3%;
+      opacity: 0.2;
+      
+    }
   }
 }
 </style>
