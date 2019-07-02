@@ -40,6 +40,7 @@ html {
         padding: 0;
       }
       a {
+        // font-family: 
         color: #051439;
         text-decoration: none;
         font-weight: bold;

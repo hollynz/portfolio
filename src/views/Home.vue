@@ -35,21 +35,19 @@ export default {
     font-family: "Barrio", cursive;
   }
 
-  .blurb {
-    width: 100%;
-    font-size: 2em;
-    line-height: 1em;
-    text-align: left;
-    // color: #5e7ca0;
-  }
+  // .blurb {
+  //   width: 100%;
+  //   font-size: 2em;
+  //   line-height: 1em;
+  //   text-align: left;
+  //   // color: #5e7ca0;
+  // }
   h1.title {
-    // margin: -40px;
     margin: auto;
     width: 100%;
     margin-bottom: -40px;
     bottom: 0;
     z-index: 1;
-    // right: 100px;
     position: absolute;
     font-size: 212px;
     color: rgba(255, 255, 255, 0.4);
