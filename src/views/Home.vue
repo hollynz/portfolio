@@ -51,7 +51,7 @@ export default {
     z-index: 1;
     // right: 100px;
     position: absolute;
-    font-size: 214px;
+    font-size: 212px;
     color: rgba(255, 255, 255, 0.4);
     font-family: "Montserrat Subrayada", sans-serif;
   }

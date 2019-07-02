@@ -1,7 +1,7 @@
 <template>
   <div class="container menu-container">
     <!-- menu: about -->
-    <div class="menu about">
+    <div @mouseover="mouseover('about')" @mouseleave="setMenusFalse()" v-bind:class="{ visible: activeMenus[0], notVisible: activeMenus[1] || activeMenus[2]}" id="about" class="menu">
       <i class="fas fa-user menu-icon"></i>
       <div class="content">
         <!-- <img class="nz-map" src="../assets/nz-map.png" alt="Map of NZ"> -->
@@ -46,7 +46,7 @@
       </div>
     </div>
     <!-- menu: tech -->
-    <div class="menu">
+    <div @mouseover="mouseover('tech')" @mouseleave="setMenusFalse()" v-bind:class="{ visible: activeMenus[1], notVisible: activeMenus[0] || activeMenus[2]}" id="tech" class="menu">
       <i class="fab fa-html5 menu-icon"></i>
       <div class="content">
         <h1>Some Things I Made</h1>
@@ -64,7 +64,7 @@
       </div>
     </div>
     <!-- menu: contact -->
-    <div class="menu">
+    <div @mouseover="mouseover('contact')" @mouseleave="setMenusFalse()" v-bind:class="{ visible: activeMenus[2], notVisible: activeMenus[0] || activeMenus[1]}" id="contact" class="menu">
       <i class="fas fa-at menu-icon"></i>
       <div class="content">
         <ul>
@@ -96,31 +96,61 @@
 
 <script>
 export default {
-  name: "Menu"
+  name: "Menu",
+  data: function() {
+    return {
+      activeMenus: [false, false, false]
+    }
+  },
+  methods: {
+      mouseover: function(menu){
+        switch(menu){
+          case 'about':
+            this.activeMenus = [true, false, false];
+            break;
+          case 'tech':
+            this.activeMenus = [false, true, false];
+            break;
+          case 'contact':
+            this.activeMenus = [false, false, true];
+            break;
+        }
+        console.log(this.activeMenus);
+      },
+      setMenusFalse: function() {
+        this.activeMenus = [false, false, false];
+        console.log(this.activeMenus);
+      }
+    }
 };
 </script>
 
 <style lang="scss">
+.visible {
+  visibility: visible;
+}
+.notVisible {
+  visibility: hidden;
+}
 .menu-container {
-    // height: 40%;
     margin: 5% auto;
     //   background: rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     overflow: hidden;
+    // position: relative;
+    height: 70vh;
   .menu {
     z-index: 2;
     width: 80px;
     height: 80px;
-    // background: rgba(255, 255, 255, 0.8);
     border: solid 1px rgba(255, 255, 255, 0.1);
-    // margin: 5%;
     transition: all 0.4s ease;
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
+    position: absolute;
     .menu-icon {
       font-size: 40px;
       color: #5e7ca0;
@@ -130,14 +160,15 @@ export default {
       display: none;
     }
     &:hover {
-      overflow-y: scroll;
+      // overflow-y: scroll;
       background: rgba(255, 255, 255, 0.9);
       cursor: auto;
-      width: 100vw;
-      height: 70vh;
-      // margin: 20px;
-      margin-bottom: 50vh;
-      transition: all 0.4s ease-in-out;
+      width: 100%;
+      height: 600px;
+      margin: 0;
+      // margin-bottom: 50vh;
+      transition: all 0.5s ease;
+      // position: absolute;
       .menu-icon {
         display: none;
       }
@@ -177,18 +208,29 @@ export default {
       }
     }
   }
-  .menu.about {
-    position: relative;
-    overflow: hidden;
-    .nz-map {
-      z-index: -1;
-      position: absolute;
-      height: 100%;
-      right: 5%;
-      top: 3%;
-      opacity: 0.2;
+  // #about {
+  //   position: relative;
+  //   overflow: hidden;
+  //   .nz-map {
+  //     z-index: -1;
+  //     position: absolute;
+  //     height: 100%;
+  //     right: 5%;
+  //     top: 3%;
+  //     opacity: 0.2;
       
-    }
+  //   }
+  // }
+  #about {
+    left: 0;
+  }
+  #tech {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  #contact {
+    right: 0;
   }
 }
 </style>
