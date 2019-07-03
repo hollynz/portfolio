@@ -14,7 +14,6 @@ html {
   width: 100vw;
   position: relative;
   overflow-y: hidden;
-  // font-family: 
   body {
     position: absolute;
     top: 0;
@@ -40,7 +39,6 @@ html {
         padding: 0;
       }
       a {
-        // font-family: 
         color: #051439;
         text-decoration: none;
         font-weight: bold;
@@ -48,15 +46,4 @@ html {
     }
   }
 }
-
-// #nav {
-//   padding: 30px;
-//   a {
-//     font-weight: bold;
-//     color: #2c3e50;
-//     &.router-link-exact-active {
-//       color: #42b983;
-//     }
-//   }
-// }
 </style>
