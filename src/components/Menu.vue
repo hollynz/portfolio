@@ -36,7 +36,7 @@
     >
       <i class="fab fa-html5 menu-icon"></i>
       <div class="content">
-        <!-- <h1>Some Things I Made</h1> -->
+        <h1>Some Things I Made</h1>
         <div class="columns">
           <div class="column">
             <a href="https://yoobee-vuejs.netlify.com" target="_blank">
@@ -250,6 +250,7 @@ ul {
       }
     }
   }
+  // Menu: About
   .menu#about {
     left: 0;
     padding: 0;
@@ -275,6 +276,7 @@ ul {
       }
     }
   }
+  // Menu: Tech
   .menu#tech {
     left: 0;
     right: 0;
@@ -284,21 +286,28 @@ ul {
     }
     &:hover {
       .content {
-        position: relative;
         display: flex;
-        overflow-y: hidden;
-        overflow-x: scroll;
+        height: 100%;
         .columns {
-          // width: 100vw;
-          position: absolute;
-          top: 0;
-          left: 0;
           margin: 0;
           padding: 0;
+          height: 100%;
+          .column {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+            &:hover {
+              img {
+                width: 500px;
+              }
+            }
+          }
         }
       }
     }
   }
+  // Menu: Contact
   .menu#contact {
     right: 0;
     .content {
@@ -362,9 +371,9 @@ ul {
             display: flex;
             justify-content: center;
             .button {
-              border: solid 1px #fff;
+              border: solid 1px #ffffff;
               background: #bd320cd7;
-              color: #fff;
+              color: #ffffff;
             }
           }
         }
