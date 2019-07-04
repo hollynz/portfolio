@@ -1,9 +1,19 @@
 <template>
   <div class="home">
     <!-- menus -->
-    <Menu/>
+    <Menu />
     <!-- big title -->
     <h1 class="title">Holly Johnson</h1>
+    <!-- <div>
+      Icons made by
+      <a href="https://www.flaticon.com/authors/google" title="Google">Google</a> from
+      <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by
+      <a
+        href="http://creativecommons.org/licenses/by/3.0/"
+        title="Creative Commons BY 3.0"
+        target="_blank"
+      >CC 3.0 BY</a>
+    </div> -->
   </div>
 </template>
 
@@ -20,7 +30,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../assets/scss/settings.scss';
+@import "../assets/scss/settings.scss";
 
 .home {
   width: 100%;
@@ -55,29 +65,29 @@ export default {
         -webkit-mask-position: -50%;
       }
     }
-    @include mq('1900') {
-        font-size: 170px;
-        margin-bottom: -30px;
+    @include mq("1900") {
+      font-size: 170px;
+      margin-bottom: -30px;
     }
-    @include mq('1600') {
-        font-size: 150px;
-        margin-bottom: -25px;
+    @include mq("1600") {
+      font-size: 150px;
+      margin-bottom: -25px;
     }
-    @include mq('1500') {
-        font-size: 140px;
-        margin-bottom: -25px;
+    @include mq("1500") {
+      font-size: 140px;
+      margin-bottom: -25px;
     }
-    @include mq('desktop-wide') {
-        font-size: 130px;
-        margin-bottom: -25px;
+    @include mq("desktop-wide") {
+      font-size: 130px;
+      margin-bottom: -25px;
     }
-    @include mq('desktop') {
-        font-size: 120px;
-        margin-bottom: -20px;
+    @include mq("desktop") {
+      font-size: 120px;
+      margin-bottom: -20px;
     }
-    @include mq('tablet-wide') {
-        font-size: 80px;
-        margin-bottom: -15px;
+    @include mq("tablet-wide") {
+      font-size: 80px;
+      margin-bottom: -15px;
     }
   }
 }
