@@ -2,13 +2,6 @@
   <div class="home">
     <!-- menus -->
     <Menu/>
-    <!-- blurb -->
-    <div class="container">
-      <!-- <div class="blurb">
-        <p>Suuuhhhhhh.</p>
-        <p>I like to ride my mountain bike.</p>
-      </div>-->
-    </div>
     <!-- big title -->
     <h1 class="title">Holly Johnson</h1>
   </div>
@@ -31,7 +24,7 @@ export default {
   width: 100%;
   height: 100%;
   h1 {
-    font-family: "Barrio", cursive;
+    font-family: "Rock Salt", cursive;
   }
   h1.title {
     margin: auto;

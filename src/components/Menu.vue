@@ -36,21 +36,52 @@
     >
       <i class="fab fa-html5 menu-icon"></i>
       <div class="content">
-        <h1>Some Things I Made</h1>
+        <h1>Some Things I Made:</h1>
         <div class="columns">
           <div class="column">
             <a href="https://yoobee-vuejs.netlify.com" target="_blank">
               <img src="../assets/projects/rad/rad-home.png" alt="RAd">
+              <div class="text">
+                <h1>RAd: Rotorua Adventure</h1>
+                <h2>Location/activity-finder web app.</h2>
+                <h3>Vue.js web app based on FourSquare and Google Maps APIs.</h3>
+                <!-- <p><b>Vue.js</b>|<b>Agile & Scrum</b>|<b>APIs</b></p> -->
+                <a
+                  class="github"
+                  href="https://github.com/hollynz/assignment-3-take-2"
+                  target="_blank"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
             </a>
           </div>
           <div class="column">
             <a href="https://holly.johnson.18cdwux07.yoobee.net.nz/wux04/" target="_blank">
               <img src="../assets/projects/vets/vets-home.png" alt="Vets@St.Clair">
+              <div class="text">
+                <h1>Vets@St.Clair</h1>
+                <h2>Website redesign for Dunedin vet clinic.</h2>
+                <h3>WordPress/PHP custom-theme website.</h3>
+                <!-- <p><b>WordPress</b>|<b>PHP</b></p> -->
+                <a class="github" href="https://github.com/hollynz/vets" target="_blank">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
             </a>
           </div>
           <div class="column">
             <a href="https://anamata.herokuapp.com" target="_blank">
               <img src="../assets/projects/anamata/anamata-home.png" alt="Anamata Cafe">
+              <div class="text">
+                <h1>Digital HEADSSS Assessment</h1>
+                <h2>Youth health assessment (HEADSSS) web app prototype.</h2>
+                <h3>Vodafone Xone Foundation Change Accelerator 2018 Program: Anamata Cafe initiative to digitise youth health assessment.</h3>
+                <!-- <p><b>React</b>|<b>Agile & Scrum</b>|<b>Heroku</b></p> -->
+                <a class="github" href="https://github.com/hollynz/anamata" target="_blank">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
             </a>
           </div>
         </div>
@@ -67,7 +98,7 @@
     >
       <i class="fas fa-at menu-icon"></i>
       <div class="content">
-        <h1>Get in Touch!</h1>
+        <h1>Get in Touch :)</h1>
         <!-- <img class="nz-map" src="../assets/nz-map.png" alt="Map of NZ"> -->
         <div class="columns is-8">
           <div class="column is-two-fifths">
@@ -113,6 +144,14 @@
                     <i class="fab fa-linkedin-in"></i>
                   </span>
                   <span class="name">Holly Johnson</span>
+                </a>
+              </li>
+              <li>
+                <a href="./static/cv.pdf" target="_blank">
+                  <span class="icon">
+                    <i class="far fa-file"></i>
+                  </span>
+                  <span class="name">CV</span>
                 </a>
               </li>
             </ul>
@@ -186,11 +225,9 @@ export default {
           this.activeMenus = [false, false, true];
           break;
       }
-      console.log(this.activeMenus);
     },
     setMenusFalse: function() {
       this.activeMenus = [false, false, false];
-      console.log(this.activeMenus);
     }
   }
 };
@@ -272,7 +309,7 @@ ul {
         background: transparent;
         width: 100%;
         opacity: 1;
-        transition: width 0.3s ease-in-out, opacity 0.9s ease-in-out;
+        transition: width 0.6s ease-in-out, opacity 0.5s ease-in-out;
       }
     }
   }
@@ -288,18 +325,48 @@ ul {
       .content {
         display: flex;
         height: 100%;
+        text-align: left;
         .columns {
           margin: 0;
+          margin-top: 50px;
           padding: 0;
           height: 100%;
           .column {
             height: 100%;
             display: flex;
-            align-items: center;
-            flex-grow: 1;
+            align-items: flex-start;
+            padding: 20px;
+            .text {
+              margin-top: 20px;
+              padding: 6px;
+              display: flex;
+              flex-direction: column;
+              h1 {
+                font-family: "Montserrat Subrayada", sans-serif;
+                font-size: 1.2em;
+              }
+              h2 {
+                  margin-top: 6px;
+                font-size: 1.1em;
+              }
+              h3 {
+                  margin-top: 6px;
+                font-size: 0.9em;
+              }
+              a.github {
+                  align-self: flex-end;
+                  margin-right: 20px;
+                  margin-top: 0;
+                  font-size: 1.8em;
+                  &:hover {
+                      color: #bd320cd7;
+                  }
+              }
+            }
             &:hover {
-              img {
-                width: 500px;
+              background: #fff;
+              h1 {
+                  color: #bd320cd7; 
               }
             }
           }
@@ -374,6 +441,11 @@ ul {
               border: solid 1px #ffffff;
               background: #bd320cd7;
               color: #ffffff;
+              &:hover {
+                background: #ffffff;
+                border-color: #5080aa;
+                color: #5080aa;
+              }
             }
           }
         }
