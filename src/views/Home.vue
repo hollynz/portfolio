@@ -20,6 +20,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../assets/scss/settings.scss';
+
 .home {
   width: 100%;
   height: 100%;
@@ -52,6 +54,30 @@ export default {
       to {
         -webkit-mask-position: -50%;
       }
+    }
+    @include mq('1900') {
+        font-size: 170px;
+        margin-bottom: -30px;
+    }
+    @include mq('1600') {
+        font-size: 150px;
+        margin-bottom: -25px;
+    }
+    @include mq('1500') {
+        font-size: 140px;
+        margin-bottom: -25px;
+    }
+    @include mq('desktop-wide') {
+        font-size: 130px;
+        margin-bottom: -25px;
+    }
+    @include mq('desktop') {
+        font-size: 120px;
+        margin-bottom: -20px;
+    }
+    @include mq('tablet-wide') {
+        font-size: 80px;
+        margin-bottom: -15px;
     }
   }
 }

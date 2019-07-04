@@ -234,6 +234,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../assets/scss/settings.scss';
+
 .visible {
   visibility: visible;
 }
@@ -251,6 +253,11 @@ ul {
   justify-content: space-between;
   overflow: hidden;
   height: 70vh;
+  @include mq('tablet-wide') {
+      width: 85%;
+      margin-top: 100px;
+      height: 80vh;
+    }
   .menu {
     z-index: 2;
     width: 80px;
@@ -326,16 +333,25 @@ ul {
         display: flex;
         height: 100%;
         text-align: left;
+         @include mq('tablet-wide') {
+            padding: 50px;
+        }
         .columns {
           margin: 0;
           margin-top: 50px;
           padding: 0;
           height: 100%;
+           @include mq('tablet-wide') {
+            overflow-y: scroll;
+        }
           .column {
             height: 100%;
             display: flex;
             align-items: flex-start;
             padding: 20px;
+             @include mq('tablet-wide') {
+            height: auto;
+             }
             .text {
               margin-top: 20px;
               padding: 6px;
@@ -388,6 +404,10 @@ ul {
         color: #222222;
         transform: translateX(1200px);
         transition: transform 0.5s ease-in-out;
+        @include mq('tablet-wide') {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
       }
       .columns {
         width: 80%;
@@ -403,12 +423,18 @@ ul {
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
+            @include mq('tablet-wide') {
+                font-size: 0.6em;
+            }
             a {
               .icon {
                 margin-top: 8px;
                 margin-right: 18px;
                 font-size: 1.1em;
                 color: #222222;
+                @include mq('tablet-wide') {
+                    margin-top: 0;
+                }
               }
               .name {
                 font-size: 0.9em;
@@ -454,6 +480,9 @@ ul {
     &:hover {
       .content {
         width: 100%;
+         @include mq('tablet-wide') {
+            padding: 50px;
+        }
         h1 {
           transform: translateX(0);
           opacity: 1;
